@@ -1,0 +1,16 @@
+.category {
+  background-color: #fde4e4;
+  padding: 18px;
+  margin: 20px 30px;
+  border-radius: 2px;
+  transition: all 0.3s ease-in;
+}
+.category:hover {
+  transform: translateY(-15px);
+}
+.image {
+  width: 4rem;
+  height: 4rem;
+  background-size: cover;
+  object-fit: fill;
+}

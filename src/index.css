@@ -1,0 +1,35 @@
+:root {
+  --red: red;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  overflow-x: hidden;
+}
+button,
+input {
+  outline: none;
+  border: none;
+  font-size: 1rem;
+}
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+.mt-20 {
+  margin: 100px 0px !important;
+}
+.red {
+  color: red !important;
+}
+.gray {
+  color: #777;
+}
