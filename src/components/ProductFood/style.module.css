@@ -5,3 +5,12 @@
   font-size: 15px !important;
   font-weight: 500;
 }
+.image {
+  transform: scale(0.7);
+
+  border-radius: 50%;
+  transition: all 0.5s ease-in;
+}
+.image:hover {
+  transform: scale(1);
+}

@@ -14,3 +14,8 @@
   background-size: cover;
   object-fit: fill;
 }
+@media (max-width: 500px) {
+  .category {
+    text-align: center;
+  }
+}

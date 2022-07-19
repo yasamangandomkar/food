@@ -9,9 +9,9 @@
 }
 body {
   overflow-x: hidden;
+  behavior: smooth;
 }
-button,
-input {
+button {
   outline: none;
   border: none;
   font-size: 1rem;

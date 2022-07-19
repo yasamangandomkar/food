@@ -1,0 +1,22 @@
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+  padding: 10px 0;
+  border-radius: 5px;
+}
+.menuButton {
+  padding: 10px;
+  margin: 0 20px;
+  background-color: transparent;
+}
+.image {
+  width: 20px;
+  height: 20px;
+}
+@media (max-width: 500px) {
+  .menuButton {
+    margin: 0 10px;
+  }
+}

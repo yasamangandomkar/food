@@ -4,8 +4,8 @@ import header from "../../assets/images/hero.png";
 import { AiFillCar } from "react-icons/ai";
 const Header = () => {
   return (
-    <Stack>
-      <Row className="align-center" style={{ marginTop: "100px" }}>
+    <Stack className={styles.header}>
+      <Row>
         <Col className={styles.headerL}>
           <h3>Easy way to an order</h3>
           <h1>
@@ -23,29 +23,29 @@ const Header = () => {
             <Button variant="outline-danger">See all foods</Button>
           </div>
           <Row style={{ marginTop: "20px" }}>
-            <Col>
+            <Col sm={6}>
               <Button
                 variant="danger"
-                style={{ borderRadius: "100%", marginRight: "10px" }}
+                style={{ borderRadius: "100%", margin: "10px" }}
               >
                 <AiFillCar size={25} />
               </Button>
               {""}
-              No shiping charge
+              <span> No shiping charge</span>
             </Col>
-            <Col>
+            <Col sm={6}>
               <Button
                 variant="danger"
-                style={{ borderRadius: "100%", marginRight: "10px" }}
+                style={{ borderRadius: "100%", margin: "10px" }}
               >
                 <AiFillCar size={25} />
               </Button>
-              100% secure checkout
+              <span> 100% secure checkout</span>
             </Col>
           </Row>
         </Col>
-        <Col className={styles.headerR}>
-          <img src={header} alt="" style={{ width: "500px" }} />
+        <Col md={6} className="text-center">
+          <img src={header} alt="" className={styles.headerImg} />
         </Col>
       </Row>
     </Stack>

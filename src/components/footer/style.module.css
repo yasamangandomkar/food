@@ -1,0 +1,11 @@
+.footer {
+  background-color: #fde4e4;
+  padding: 50px 0;
+}
+.footerLeft h5 {
+  font-weight: 700;
+  font-size: 17px;
+}
+.footerLeft h6 {
+  font-weight: 500;
+}

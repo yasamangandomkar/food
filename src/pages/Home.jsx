@@ -3,14 +3,18 @@ import Category from "../components/Category/Category";
 import Header from "../components/Header/Header";
 import ProductFood from "../components/ProductFood/ProductFood";
 import Services from "../components/Services/Services";
-import products from "../assets/fake-data/Products";
+import Tasty from "../components/Location/Location";
+import Testimonial from "../components/Testimonial/Testimonial";
+
 const Home = () => {
   return (
     <div>
       <Header />
       <Category />
       <Services />
-      <ProductFood products={products} />
+      <ProductFood />
+      <Tasty />
+      <Testimonial />
     </div>
   );
 };
