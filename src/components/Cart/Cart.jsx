@@ -8,6 +8,7 @@ import styles from "./style.module.css";
 const Cart = () => {
   const dispatch = useDispatch();
   const products = useSelector((state) => state.cart.cartItems);
+  const totalAmount = useSelector((state) => state.cart.totalAmount);
   const toggleCart = () => {
     dispatch(toggle());
   };
@@ -23,10 +24,10 @@ const Cart = () => {
       </div>
       <div className={styles.cartBottom}>
         <h6>
-          Subtotal amount :<span className="red">$1234</span>
+          Subtotal amount :<span className="red">${totalAmount}</span>
         </h6>
-        <button>
-          <Link to="/checkout">checkout</Link>
+        <button onClick={toggleCart}>
+          <Link to="/cart">checkout</Link>
         </button>
       </div>
       {/* <div className={styles.overlay}></div> */}

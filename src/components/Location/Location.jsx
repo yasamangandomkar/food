@@ -7,8 +7,8 @@ const Tasty = () => {
   return (
     <Stack style={{ marginTop: "100px" }}>
       <Row>
-        <Col md={6}>
-          <img src={image} alt="" width={600} />
+        <Col md={6} className={styles.image}>
+          <img src={image} alt="" />
         </Col>
         <Col md={6}>
           <h1>

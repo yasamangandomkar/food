@@ -1,4 +1,7 @@
 .category {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #fde4e4;
   padding: 18px;
   margin: 20px 30px;
@@ -17,5 +20,14 @@
 @media (max-width: 500px) {
   .category {
     text-align: center;
+    margin: 20px;
+    padding: 12px;
+  }
+  .image {
+    width: 2rem;
+    height: 2rem;
+  }
+  .category span {
+    font-size: 10px;
   }
 }

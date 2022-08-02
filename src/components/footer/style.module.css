@@ -9,3 +9,33 @@
 .footerLeft h6 {
   font-weight: 500;
 }
+.form input {
+  width: 100%;
+  border: 1px solid #bfbfbf;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+.form {
+  position: relative;
+}
+.form svg {
+  position: absolute;
+  right: 0;
+  background-color: red;
+  color: #fff;
+  padding: 5px;
+  height: 100%;
+  z-index: 999;
+  border-radius: 0 5px 5px 0;
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    text-align: center;
+    margin: 2rem 0;
+  }
+
+  .footerCenter {
+    margin-top: 2rem;
+  }
+}

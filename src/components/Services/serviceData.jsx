@@ -6,16 +6,16 @@ export const service = [
   {
     imgUrl: service1,
     title: "Quick Delivery",
-    text: "Lorem ipsum dolor sit amet consectetu adipisicing elit",
+    text: "No drivers? Automatically dispatch orders with our on-demand network of riders/drivers",
   },
   {
     imgUrl: service2,
     title: "Super Dine In",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit",
+    text: "12 hours active monitoring and support on all your delivery orders including weekends and Public Holidays.",
   },
   {
     imgUrl: service3,
     title: "Easy Pick Up",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit",
+    text: "Send all orders directly to your kitchen and throttle them during peak hours",
   },
 ];

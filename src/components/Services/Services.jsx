@@ -23,8 +23,8 @@ const Services = () => {
       <Stack className="mt-20">
         <Row className="justify-content-center" gap={3}>
           {services.map((service, index) => (
-            <Col key={index} md="3" className="text-center">
-              <img src={service.imgUrl} alt="" className="w-25" />
+            <Col key={index} xs={6} md={5} lg={3} className="text-center">
+              <img src={service.imgUrl} alt="" className="w-50" />
               <h5 className="my-3">{service.title}</h5>
               <p className="gray">{service.text}</p>
             </Col>

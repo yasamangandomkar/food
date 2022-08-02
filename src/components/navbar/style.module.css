@@ -6,7 +6,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 15px;
+}
+.logo span {
+  font-size: 20px;
   font-weight: 600;
 }
 .nav {
@@ -45,6 +47,9 @@
 .navItem {
   margin-left: 10px;
 }
+.navItems a {
+  margin: 0 10px;
+}
 
 @media (min-width: 576px) {
   .menuMobile {
@@ -52,19 +57,31 @@
   }
 }
 
-@media only screen and (max-width: 550px) {
+@media screen and (max-width: 550px) {
   .navItems {
-    display: none;
+    display: none !important;
     position: absolute;
-    width: 200px;
-    height: 100vh !important;
-    /* display: flex; */
-    flex-direction: column !important;
-    align-items: center;
+    top: 12vh;
     right: 0;
-    background-color: rgb(182, 182, 182);
-    justify-content: center;
-    margin-top: 30px;
-    z-index: 100;
+    left: 0;
+    background-color: #fff;
+    flex-direction: column !important;
+    width: 100vw;
+    align-items: center;
+    z-index: 999;
+    transition: all 0.5s ease-in-out;
+  }
+  .show {
+    display: flex !important;
+  }
+  .navItems a {
+    margin: 20px 0;
+  }
+
+  .navMenu {
+    display: none;
+  }
+  .logo span {
+    font-size: 15px;
   }
 }

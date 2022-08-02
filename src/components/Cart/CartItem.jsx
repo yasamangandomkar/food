@@ -1,9 +1,29 @@
 import { AiOutlineClose } from "react-icons/ai";
 import { GrFormAdd } from "react-icons/gr";
 import { IoIosRemove } from "react-icons/io";
-import productImg from "../../assets/images/product_01.1.jpg";
+import { useDispatch } from "react-redux";
+import { addToCart, deleteItem, removeItem } from "../../features/cartSlice";
+
 import styles from "./style.module.css";
 const CartItem = ({ item }) => {
+  const dispatch = useDispatch();
+
+  const handleDecrese = () => {
+    dispatch(removeItem(id));
+  };
+  const handleDelete = () => {
+    dispatch(deleteItem(id));
+  };
+  const handleIncrease = () => {
+    dispatch(
+      addToCart({
+        id,
+        title,
+        price,
+        image01,
+      })
+    );
+  };
   const { id, title, price, image01, quantity, totalPrice } = item;
   return (
     <div className={styles.cartItems}>
@@ -13,21 +33,21 @@ const CartItem = ({ item }) => {
           <div>
             <h6>{title}</h6>
             <p className={styles.title}>
-              {quantity}x <span>{totalPrice}</span>
+              {quantity}x <span>{totalPrice}$</span>
             </p>
           </div>
           <div className={styles.cartBtn}>
             <span>
-              <IoIosRemove />
+              <IoIosRemove onClick={handleDecrese} />
             </span>
             <span className={styles.quantity}>{quantity}</span>
             <span>
-              <GrFormAdd />
+              <GrFormAdd onClick={handleIncrease} />
             </span>{" "}
           </div>
         </div>
 
-        <AiOutlineClose />
+        <AiOutlineClose onClick={handleDelete} />
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
-import image1 from "../../assets/images/ava-1.jpg";
+import image1 from "../../assets/images/ava-1.png";
 import image2 from "../../assets/images/ava-2.jpg";
 import image3 from "../../assets/images/ava-3.jpg";
 const TestimonialSlider = () => {
@@ -24,7 +24,7 @@ const TestimonialSlider = () => {
             at harum ex accusantium voluptas!"
           </p>
           <div className="d-flex align-items-center">
-            <img src={image1} alt="" width={50} />
+            <img src={image1} alt="" />
             <span style={{ marginLeft: "5px", fontWeight: "bold" }}>
               Jhon Doe
             </span>

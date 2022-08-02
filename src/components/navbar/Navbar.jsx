@@ -12,6 +12,8 @@ import styles from "./style.module.css";
 
 const Navigation = () => {
   const count = useSelector((state) => state.cart.count);
+  const [toggleMobile, setToggleMobile] = useState(false);
+
   const [navBackground, setNavBackground] = useState(false);
   const navRef = useRef();
   navRef.current = navBackground;
@@ -31,11 +33,13 @@ const Navigation = () => {
     { title: "Home", path: "/" },
     { title: "Foods", path: "/foods" },
     { title: "Cart", path: "/cart" },
-    { title: "Contact", path: "/contact" },
   ];
   const dispatch = useDispatch();
-  const menuRef = useRef(null);
-  // const toggleMenu = () => menuRef.current.classList.toggle("show");
+  // const menuRef = useRef(null);
+  const toggleMenu = () => {
+    setToggleMobile(!toggleMobile);
+  };
+
   const toggleCart = () => {
     dispatch(toggle());
   };
@@ -57,30 +61,40 @@ const Navigation = () => {
 
         <Navbar.Brand className={styles.logo}>
           <img src={logo} alt="" style={{ width: "40px" }} />
-          Tasty Treat
+          <span> Tasty Treat</span>
         </Navbar.Brand>
 
         {/* center navbar */}
 
-        <Nav className={styles.navItems} ref={menuRef}>
+        <div
+          onClick={toggleMenu}
+          className={
+            toggleMobile
+              ? `${styles.navItems}  ${styles.show}`
+              : `${styles.navItems} `
+          }
+        >
           {navItems.map((item, index) => (
-            <Nav.Item key={index} className={styles.navMenu}>
-              <NavLink
-                to={item.path}
-                className={({ isActive }) =>
-                  isActive ? styles.active : styles.navLink
-                }
-              >
-                {item.title}
-              </NavLink>
-            </Nav.Item>
+            <NavLink
+              key={index}
+              to={item.path}
+              className={({ isActive }) =>
+                isActive ? styles.active : styles.navLink
+              }
+            >
+              {item.title}
+            </NavLink>
           ))}
           <div className={styles.overlay}></div>
-        </Nav>
+        </div>
 
         {/* right navbar */}
         <Nav>
-          <Nav.Item className={styles.badge} gap={3}>
+          <Nav.Item
+            className={styles.badge}
+            gap={3}
+            style={{ cursor: "pointer" }}
+          >
             <RiShoppingBasketLine size={20} onClick={toggleCart} />
             <span>{count}</span>
           </Nav.Item>
@@ -88,7 +102,11 @@ const Navigation = () => {
             <AiOutlineUser size={20} />
           </Nav.Item>
           <Nav.Item className={styles.navItem}>
-            <HiOutlineMenuAlt3 className={styles.menuMobile} size={20} />
+            <HiOutlineMenuAlt3
+              className={styles.menuMobile}
+              size={20}
+              onClick={toggleMenu}
+            />
           </Nav.Item>
         </Nav>
       </Container>

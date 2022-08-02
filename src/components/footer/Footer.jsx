@@ -6,14 +6,14 @@ const Footer = () => {
   return (
     <footer className={styles.footer}>
       <Container>
-        <Row>
-          <Col lg={3}>
+        <Row className="text-center">
+          <Col lg={3} xs={6} md={4}>
             <p>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa,
               possimus!
             </p>
           </Col>
-          <Col lg={3} className={styles.footerLeft}>
+          <Col lg={3} xs={6} md={4} className={styles.footerLeft}>
             <div>
               <h5>Delivery Time</h5>
               <h6>Sunday-Thursday</h6>
@@ -24,7 +24,7 @@ const Footer = () => {
               <span>off day</span>
             </div>
           </Col>
-          <Col lg={3} className={styles.footerLeft}>
+          <Col lg={3} md={3} className={styles.footerLeft}>
             <div>
               <h5> Contact</h5>
               <span>Location:ZindaBazar,Sylhet-3100,Bangeladesh</span>
@@ -35,14 +35,16 @@ const Footer = () => {
               </div>
             </div>
           </Col>
-          <Col lg={3}>
+          <Col lg={3} md={12} className={styles.footerCenter}>
             <div>
               <h5> Newsletter</h5>
               <span>Subscribe our newsletter</span>
 
               <form>
-                <input type="text" placeholder="Enter your email" />
-                <RiSendPlaneLine />
+                <div className={styles.form}>
+                  <input type="text" placeholder="Enter your email" />
+                  <RiSendPlaneLine size={30} />
+                </div>
               </form>
             </div>
           </Col>

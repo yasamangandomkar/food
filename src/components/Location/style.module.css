@@ -1,4 +1,11 @@
-/* .location {
-  margin-top: 100px;
-  align-items: center;
-} */
+.image {
+  width: 50%;
+}
+.image img {
+  width: 100%;
+}
+@media screen and (max-width: 500px) {
+  .image {
+    width: 80%;
+  }
+}

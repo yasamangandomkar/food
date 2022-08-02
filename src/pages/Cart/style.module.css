@@ -1,0 +1,40 @@
+.cart {
+  margin: 8rem;
+}
+.tableHeader {
+  text-align: center;
+}
+.tableHeader tr th {
+  font-size: 1.3rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgb(168, 168, 168);
+}
+.table {
+  width: 100%;
+  text-align: center;
+}
+.tableBody td {
+  padding: 1rem 0;
+}
+@media screen and (max-width: 550px) {
+  .cart {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .tableHeader tr th {
+    font-size: 0.7rem;
+  }
+  .cart {
+    margin: 0;
+    margin-top: 2rem;
+
+    /* transform: scale(0.9); */
+  }
+
+  .tableBody td {
+    font-size: 0.7rem;
+    text-align: center;
+  }
+}

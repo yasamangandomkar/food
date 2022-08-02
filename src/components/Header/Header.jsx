@@ -13,8 +13,8 @@ const Header = () => {
             <span className="red"> your door</span>
           </h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci
-            vitae
+            Own your guest relationship, grow your online sales and maximize
+            profits
           </p>
           <div>
             <Button style={{ marginRight: "20px" }} variant="danger">
@@ -23,7 +23,7 @@ const Header = () => {
             <Button variant="outline-danger">See all foods</Button>
           </div>
           <Row style={{ marginTop: "20px" }}>
-            <Col sm={6}>
+            <Col sm={12} md={12}>
               <Button
                 variant="danger"
                 style={{ borderRadius: "100%", margin: "10px" }}
@@ -33,7 +33,7 @@ const Header = () => {
               {""}
               <span> No shiping charge</span>
             </Col>
-            <Col sm={6}>
+            <Col sm={12}>
               <Button
                 variant="danger"
                 style={{ borderRadius: "100%", margin: "10px" }}

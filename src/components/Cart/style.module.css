@@ -31,18 +31,19 @@
   margin: 20px;
 }
 .cartItems {
+  width: 100%;
   display: flex;
   margin-bottom: 5px;
   padding: 10px;
   align-items: center;
   background-color: #ffff;
-  border: 1px solid rgb(238, 238, 238);
 }
 .cartItems div {
   align-items: center;
   gap: 10px;
 }
 .cartBtn {
+  width: 6.25rem;
   display: flex;
   justify-content: space-between;
   background-color: #fde4e4;

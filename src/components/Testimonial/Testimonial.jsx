@@ -1,11 +1,11 @@
 import { Col, Row, Stack } from "react-bootstrap";
 import image from "../../assets/images/network.png";
 import TestimonialSlider from "../Slider/TestimonialSlider";
-
+import styles from "./style.module.css";
 const Testimonial = () => {
   return (
     <Stack>
-      <Row className="justify-content-center align-items-center">
+      <Row className={styles.testimonial}>
         <Col lg={6}>
           <h5 className="red">Testimonial</h5>
           <h1>
@@ -18,7 +18,7 @@ const Testimonial = () => {
           <TestimonialSlider />
         </Col>
         <Col lg={6}>
-          <img src={image} alt="" width={600} />
+          <img src={image} alt="" className={styles.image} />
         </Col>
       </Row>
     </Stack>
